@@ -4,13 +4,18 @@ const Router=express.Router();
 const cors=require('cors');
 const serverLess=require('serverless-http');
 
-app.use(cors({origin:'http://127.0.0.1:5500'}));
+app.use(cors());
 app.use(express.json());
 
 
-Router.get('/.netlify/functions/main',(req,res)=>{
+Router.get('/',(req,res)=>{
     res.json('hello world again');
     console.log(req.body.message);
+})
+
+Router.post('/post',(req,res)=>{
+ 
+    res.json('response is yours bitch');
 })
 
 app.use('/',Router);
