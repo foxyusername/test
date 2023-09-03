@@ -14,7 +14,6 @@ Router.get('/',(req,res)=>{
 })
 
 Router.post('/post',(req,res)=>{
- 
     res.json('response is yours bitch');
 })
 
