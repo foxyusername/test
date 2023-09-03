@@ -8,12 +8,12 @@ app.use(cors());
 app.use(express.json());
 
 
-Router.get('/',(req,res)=>{
+Router.get('/.netlify/functions/main',(req,res)=>{
     res.json('hello world again');
     console.log(req.body.message);
 })
 
-Router.post('/post',(req,res)=>{
+Router.post('/.netlify/functions/main',(req,res)=>{
     res.json('response is yours bitch');
 })
 
