@@ -11,7 +11,8 @@ const data={ message:"hello world"}
   };
 
 fetch('https://helpful-figolla-cef210.netlify.app/.netlify/functions/main',requestOptions)
-.then((res)=>console.log(res.json()))
+.then((res)=>res.json())
+.then((res)=>console.log(res))
 .catch((err)=>console.log(err));
 
 }
